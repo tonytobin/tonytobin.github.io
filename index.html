@@ -18,28 +18,30 @@
         </nav>
     </header>
 
-    <div class="welcome-section">
-        <h1>Welcome to My Personal Website</h1>
-        <p>This is a space where I share my thoughts, projects, and experiences.</p>
-        <a href="https://github.com/tonytobin/tonytobin" class="button">Learn More</a>
-    </div>
+    <div class="content">
+        <div class="welcome-section">
+            <h1>Welcome to My Personal Website</h1>
+            <p>This is a space where I share my thoughts, projects, and experiences.</p>
+            <a href="about.html" class="button">Learn More</a>
+        </div>
 
-    <div class="chat-bubble" id="chat-bubble" onclick="toggleChatWindow()">
-        <span>Talk with me</span>
-        <button class="close-button" onclick="toggleChatWindow()">X</button>
-    </div>
-
-    <div class="bot-interface" id="bot-interface">
-        <div class="chat-container">
-            <div class="chat-box" id="chat-box"></div>
-            <input type="text" id="user-input" placeholder="Type your message...">
-            <button onclick="sendMessage()">Send</button>
+        <div class="chat-bubble" id="chat-bubble" onclick="toggleChatWindow()">
+            <span>Talk with me</span>
+            <button class="close-button" onclick="toggleChatWindow()">X</button>
+            <div class="bot-interface" id="bot-interface">
+                <div class="chat-container">
+                    <div class="chat-box" id="chat-box"></div>
+                    <input type="text" id="user-input" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 Tobin Tony. All rights reserved.</p>
     </footer>
+    
     <script>
         function toggleChatWindow() {
             var botInterface = document.getElementById("bot-interface");
