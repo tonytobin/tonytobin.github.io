@@ -74,7 +74,7 @@ footer {
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
-    position: relative; /* Required for positioning close button */
+    position: relative;
 }
 
 .close-button {
@@ -88,19 +88,23 @@ footer {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    display: none; /* Hide by default */
-}
-
-.chat-bubble:hover .close-button {
-    display: block; /* Show when chat bubble is hovered */
-}
-
-.bot-interface {
     display: none;
 }
 
 .bot-interface.show {
     display: block;
+}
+
+.close-button.show {
+    display: block;
+}
+
+.chat-bubble:hover .close-button {
+    display: block;
+}
+
+.bot-interface {
+    display: none;
 }
 
 .chat-container {
