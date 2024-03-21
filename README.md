@@ -1,2 +1,2 @@
-hello
-this is a sample page in readme
+
+this is my sample website
