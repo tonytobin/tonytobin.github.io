@@ -26,13 +26,13 @@
 
     <div class="chat-bubble" id="chat-bubble" onclick="toggleChatWindow()">
         <span>Talk with me</span>
-    </div>
-
-    <div class="chat-window" id="chat-window">
-        <div class="chat-container">
-            <div class="chat-box" id="chat-box"></div>
-            <input type="text" id="user-input" placeholder="Type your message...">
-            <button onclick="sendMessage()">Send</button>
+        <button class="close-button" onclick="toggleChatWindow()">X</button>
+        <div class="bot-interface" id="bot-interface">
+            <div class="chat-container">
+                <div class="chat-box" id="chat-box"></div>
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
         </div>
     </div>
 
@@ -41,8 +41,8 @@
     </footer>
     <script>
         function toggleChatWindow() {
-            var chatWindow = document.getElementById("chat-window");
-            chatWindow.classList.toggle("show");
+            var botInterface = document.getElementById("bot-interface");
+            botInterface.classList.toggle("show");
         }
 
         function sendMessage() {
