@@ -3,11 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: #f1f1f1;
     color: #000;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Set minimum height to fill the viewport */
 }
 
 header {
@@ -32,10 +29,14 @@ nav ul li a {
     text-decoration: none;
 }
 
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .welcome-section {
-    flex: 1; /* Fill remaining space */
     text-align: center;
-    padding: 100px 20px;
 }
 
 .welcome-section h1 {
@@ -50,22 +51,13 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 .button:hover {
     background-color: #444;
 }
 
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto; /* Push footer to the bottom */
-}
-
-/* bot */
-/* styles.css */
 .chat-bubble {
     position: fixed;
     bottom: 20px;
@@ -75,6 +67,7 @@ footer {
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
+    position: relative; /* Required for positioning close button */
 }
 
 .close-button {
@@ -96,15 +89,7 @@ footer {
 }
 
 .bot-interface {
-    position: fixed;
-    bottom: 70px; /* Adjust as needed */
-    right: 20px;
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    display: none; /* Hide by default */
-    width: 300px; /* Adjust as needed */
+    display: none;
 }
 
 .bot-interface.show {
@@ -112,33 +97,4 @@ footer {
 }
 
 .chat-container {
-    padding: 20px;
-}
-
-.chat-box {
-    max-height: 200px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-}
-
-.chat-container input[type="text"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.chat-container button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.chat-container button:hover {
-    background-color: #0056b3;
-}
-
+    padding: 20
