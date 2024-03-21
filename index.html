@@ -42,7 +42,9 @@
     <script>
         function toggleChatWindow() {
             var botInterface = document.getElementById("bot-interface");
+            var closeButton = document.querySelector('.close-button');
             botInterface.classList.toggle("show");
+            closeButton.classList.toggle("show");
         }
 
         function sendMessage() {
