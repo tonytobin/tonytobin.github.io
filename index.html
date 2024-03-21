@@ -24,8 +24,41 @@
         <a href="https://github.com/tonytobin/tonytobin" class="button">Learn More</a>
     </div>
 
+    <div class="chat-bubble" id="chat-bubble" onclick="toggleChatWindow()">
+        <span>Talk with me</span>
+    </div>
+
+    <div class="chat-window" id="chat-window">
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box"></div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2024 Tobin Tony. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleChatWindow() {
+            var chatWindow = document.getElementById("chat-window");
+            chatWindow.classList.toggle("show");
+        }
+
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            var chatBox = document.getElementById("chat-box");
+
+            // Display user message
+            chatBox.innerHTML += "<div>User: " + userInput + "</div>";
+
+            // Simulate bot response (you can replace this with your actual bot logic)
+            var botResponse = "Sorry, I'm just a demo chatbot!";
+            chatBox.innerHTML += "<div>Bot: " + botResponse + "</div>";
+
+            // Clear user input
+            document.getElementById("user-input").value = "";
+        }
+    </script>
 </body>
 </html>
