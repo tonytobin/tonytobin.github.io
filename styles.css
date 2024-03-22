@@ -88,15 +88,54 @@ footer {
 }
 
 .chat-bubble:hover .close-button {
-    display: block; /* Show when chat bubble is hovered */
+    display: block;
 }
 
 .bot-interface {
-    display: none;
     position: fixed;
-    bottom: 100px;
-    right: 20px;
-    width: 300px;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    max-width: 300px;
     background-color: #f1f1f1;
     border: 1px solid #ccc;
-    border-radius: 
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 0;
+}
+
+.bot-interface.show {
+    display: block;
+}
+
+.chat-container {
+    padding: 20px;
+}
+
+.chat-box {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.chat-container input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chat-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-container button:hover {
+    background-color: #0056b3;
+}
