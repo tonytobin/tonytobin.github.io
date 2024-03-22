@@ -62,6 +62,7 @@ footer {
     padding: 20px 0;
     margin-top: auto; /* Push footer to the bottom */
 }
+/* styles.css */
 .chat-bubble {
     position: fixed;
     bottom: 20px;
@@ -88,21 +89,19 @@ footer {
 }
 
 .chat-bubble:hover .close-button {
-    display: block;
+    display: block; /* Show when chat bubble is hovered */
 }
 
 .bot-interface {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    max-width: 300px;
+    bottom: 70px; /* Adjust as needed */
+    right: 20px;
     background-color: #f1f1f1;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    display: none;
-    z-index: 0;
+    display: none; /* Hide by default */
+    width: 300px; /* Adjust as needed */
 }
 
 .bot-interface.show {
